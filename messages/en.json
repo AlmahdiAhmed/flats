@@ -1,0 +1,27 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "flats for rent",
+    "desc": "Get your modern furnished apartment in an full service building.",
+    "rents": "Monthly and daily rents are available",
+    "location": "Location",
+    "contact": "Contact Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "parking": "Parking lots",
+    "cameras": "Security Cameras",
+    "elevator": "Elevator",
+    "fire": "Fire extinguisher"
+  },
+  "gallery": {
+    "title": "The apartment",
+    "desc": "Get your furnished apartment in a building with full services with a parking lot, security cameras and fire safety equipments. The building has an elevator. The apartment has three bedrooms, two bathroom, living room and a complete kitchen",
+    "link": "More photos"
+  }
+}
