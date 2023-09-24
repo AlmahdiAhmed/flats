@@ -5,7 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ImLocation } from "react-icons/im";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { lang } from "./Provider";
+import { useContext } from "react";
 const Hero = () => {
+  const { locale } = useContext(lang);
   const t = useTranslations("home");
   return (
     <section className=" flex justify-center h-screen max-w-4xl mx-auto">
@@ -19,7 +22,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           transition={{ staggerChildren: 0.3 }}
-          className="flex flex-col gap-2 items-center pt-3"
+          className="flex p-2 pt-5 flex-col gap-2 items-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
@@ -29,22 +32,28 @@ const Hero = () => {
           >
             {t("title")}
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-lg font-semibold"
+          <div
+            className={`flex flex-col gap-3 items-start ${
+              locale === "ar" ? "items-end" : ""
+            }`}
           >
-            {t("desc")}
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-lg font-semibold"
-          >
-            {t("rents")}
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-lg font-semibold"
+            >
+              {t("desc")}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-lg font-semibold"
+            >
+              {t("rents")}
+            </motion.p>
+          </div>
         </motion.div>
 
         <motion.div

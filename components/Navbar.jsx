@@ -35,7 +35,7 @@ const Navbar = ({ locale }) => {
         {/* mobile */}
 
         <div
-          className={`absolute shadow-slate-700 top-[50px] flex flex-col items-center sm:hidden gap-3 pt-5 h-screen w-[35%] transition-all duration-500 bg-[#44728f] ${
+          className={`absolute shadow-slate-700 top-[50px] flex flex-col items-center sm:hidden gap-3 pt-5 h-screen w-[45%] transition-all duration-500 bg-[#44728f] ${
             !toggle ? "-translate-x-[150%]" : "translate-x-0"
           }`}
         >

@@ -63,13 +63,19 @@ const Gallery = () => {
           >
             {t("title")}
           </h2>
-          <p className="text-lg text-[#010101] sm:pl-3">{t("desc")}</p>
-          <Link
-            href={"/gallery"}
-            className="mt-2 p-1 ml-3 bg-[#2f4858] text-[#fafbfa] border hover:border-[#2f4858] rounded-md w-fit hover:bg-[#fafbfa] hover:text-[#2f4858] transition-all"
+          <div
+            className={`flex flex-col items-start ${
+              locale === "ar" ? "items-end" : ""
+            }`}
           >
-            {t("link")}
-          </Link>
+            <p className="text-lg w-full text-[#010101] sm:pl-3">{t("desc")}</p>
+            <Link
+              href={"/gallery"}
+              className="sm:ml-3 mt-2 p-1 flex justify-center bg-[#2f4858] text-[#fafbfa] border hover:border-[#2f4858] rounded-md w-[120px] hover:bg-[#fafbfa] hover:text-[#2f4858] transition-all"
+            >
+              {t("link")}
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

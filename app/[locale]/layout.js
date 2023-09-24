@@ -32,6 +32,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
           <Provider locale={locale}>
             <Navbar locale={locale} />
             {children}
+            <Contact />
           </Provider>
         </NextIntlClientProvider>
       </body>
