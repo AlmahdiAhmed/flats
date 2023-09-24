@@ -49,7 +49,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-lg font-semibold"
+              className={`text-lg font-semibold ${
+                locale === "ar" ? "pr-2" : ""
+              }`}
             >
               {t("rents")}
             </motion.p>
