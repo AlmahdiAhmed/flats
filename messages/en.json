@@ -23,5 +23,9 @@
     "title": "The apartment",
     "desc": "Get your furnished apartment in a building with full services with a parking lot, security cameras and fire safety equipments. The building has an elevator. The apartment has three bedrooms, two bathroom, living room and a complete kitchen",
     "link": "More photos"
+  },
+  "contact": {
+    "location": "Salalah, Oman",
+    "reception": "Reception in open 24 hrs"
   }
 }

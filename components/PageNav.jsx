@@ -6,7 +6,7 @@ import Toggle from "./Toggle";
 import { HiMenu } from "react-icons/hi";
 import { useContext, useState } from "react";
 import { lang } from "./Provider";
-const Navbar = () => {
+const PageNav = () => {
   const { locale } = useContext(lang);
   const [toggle, setToggle] = useState(false);
   const t = useTranslations("navbar");
@@ -25,9 +25,8 @@ const Navbar = () => {
               locale === "ar" ? "flex-row-reverse" : ""
             }`}
           >
-            <Link href={"#home"}>{t("home")}</Link>
-            <Link href={"#services"}>{t("services")}</Link>
-            <Link href={"#gallery"}>{t("gallery")}</Link>
+            <Link href={"/"}>{t("home")}</Link>
+            <Link href={"/#services"}>{t("services")}</Link>
             <Link href={"#contact"}>{t("contact")}</Link>
           </div>
           <div onClick={() => setToggle(!toggle)} className="pr-5">
@@ -41,14 +40,11 @@ const Navbar = () => {
             !toggle ? "-translate-x-[150%]" : "translate-x-0"
           }`}
         >
-          <Link href={"#home"} onClick={() => setToggle(false)}>
+          <Link href={"/"} onClick={() => setToggle(false)}>
             {t("home")}
           </Link>
-          <Link href={"#services"} onClick={() => setToggle(false)}>
+          <Link href={"/#services"} onClick={() => setToggle(false)}>
             {t("services")}
-          </Link>
-          <Link href={"#gallery"} onClick={() => setToggle(false)}>
-            {t("gallery")}
           </Link>
           <Link href={"#contact"} onClick={() => setToggle(false)}>
             {t("contact")}
@@ -58,4 +54,4 @@ const Navbar = () => {
     </header>
   );
 };
-export default Navbar;
+export default PageNav;

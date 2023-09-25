@@ -30,7 +30,6 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       <body className="bg-[#fafbfa] scroll-smooth">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Provider locale={locale}>
-            <Navbar locale={locale} />
             {children}
             <Contact />
           </Provider>
