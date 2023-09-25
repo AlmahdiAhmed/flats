@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ImLocation } from "react-icons/im";
+import { FaWhatsapp } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { lang } from "./Provider";
 import { useContext } from "react";
@@ -64,13 +64,18 @@ const Hero = () => {
           className="flex gap-2 pt-3"
         >
           <Link
-            href={"#contact"}
-            className="border border-[#2f4858] py-1 px-2 rounded-full flex items-center justify-center gap-2"
+            href={
+              locale === "en"
+                ? "https://wa.me/+96890710828?text=Hi%20I%20am%20looking%20for%20an%20apartment"
+                : "https://wa.me/+96890710828?text=مرحبا%20انا%20ابحث%20عن%20شقة"
+            }
+            target="_blank"
+            className="border border-[#2f4858] py-1 px-2 rounded-full flex items-center justify-center gap-1"
           >
-            <span className="h-full flex items-center">
-              <ImLocation />
+            <span className="h-full flex items-center text-xl">
+              <FaWhatsapp />
             </span>
-            <span className="h-full">{t("location")}</span>
+            <span className="h-full">{t("send")}</span>
           </Link>
           <Link
             href={"#contact"}
